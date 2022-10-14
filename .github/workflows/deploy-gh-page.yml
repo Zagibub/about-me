@@ -24,8 +24,5 @@ jobs:
         run: |
           git add -f dist
           git add CNAME
-          git stash
-          git checkout gh-pages
-          git stash pop
           git commit -m "GH-Page Update"
-          git push gh-pages --force
+          git subtree push --prefix dist origin gh-pages
