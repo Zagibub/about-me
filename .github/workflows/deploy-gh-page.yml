@@ -15,15 +15,5 @@ jobs:
         run: npm i
       - name: build
         run: npm run build
-      - name: setup git config
-        run: |
-          git init
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-      - name: push dependencies
-        run: |
-          git add -f dist
-          git add CNAME
-          git commit -m "GH-Page Update"
-          git status
-          git push -f origin gh-pages 
+      - name: push artifacts
+        run: npm run deploy
