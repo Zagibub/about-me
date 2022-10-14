@@ -25,4 +25,4 @@ jobs:
           git add -f dist
           git add CNAME
           git commit -m "GH-Page Update"
-          git subtree push --prefix dist origin gh-pages
+          git subtree push --prefix dist origin gh-pages --force
