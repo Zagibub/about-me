@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cnameToDist": "echo 'eremeev.de' > CNAME",
+    "cnameToDist": "echo 'eremeev.de' > dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
