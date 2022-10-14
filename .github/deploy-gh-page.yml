@@ -23,5 +23,6 @@ jobs:
         - name: push dependencies
           run: |
             git add -f dist
+            git add CNAME
             git commit -m "GH-Page Update"
             git push origin gh-pages --force
