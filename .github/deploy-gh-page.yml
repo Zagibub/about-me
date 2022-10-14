@@ -1,0 +1,27 @@
+name: Github Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-gh-page:
+    runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: '16'
+        - name: install dependencies
+          run: npm i
+        - name: build
+          run: npm run build
+        - name: setup git config
+          run: |
+            git fetch
+            git config user.name "GitHub Actions Bot"
+            git config user.email "<>"
+        - name: push dependencies
+          run: |
+            git add -f dist
+            git commit -m "GH-Page Update"
+            git push origin gh-pages --force

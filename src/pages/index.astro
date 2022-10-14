@@ -1,0 +1,9 @@
+---
+import MeComposition from "../components/MeComposition.vue";
+import AboutMeLayout from "../layouts/AboutMeLayout.vue";
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+<HomeLayout>
+    <AboutMeLayout client:load><MeComposition client:load /></AboutMeLayout>
+</HomeLayout>
