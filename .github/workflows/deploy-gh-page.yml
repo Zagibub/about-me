@@ -26,6 +26,6 @@ jobs:
           git add CNAME
           git stash
           git checkout gh-pages
-          gh stash pop
+          git stash pop
           git commit -m "GH-Page Update"
           git push gh-pages --force
