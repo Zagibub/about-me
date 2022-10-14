@@ -17,7 +17,7 @@ jobs:
         run: npm run build
       - name: setup git config
         run: |
-          git fetch
+          git init
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
       - name: push dependencies
@@ -25,4 +25,5 @@ jobs:
           git add -f dist
           git add CNAME
           git commit -m "GH-Page Update"
-          git push origin `git subtree push --force --prefix dist`: gh-pages --force
+          git status
+          git push gh-pages --force
