@@ -9,7 +9,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "cname": "echo 'eremeev.de' > CNAME",
+    "gh-pages": "gh-pages -d dist",
+    "deploy":"npm run cname && npm run gh-pages"
   },
   "dependencies": {
     "@astrojs/tailwind": "^2.1.0",
