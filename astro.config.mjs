@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "eremeev.de",
+  site: "https://eremeev.de",
   // Enable Vue to support Vue components.
   integrations: [vue(), tailwind()],
 });
