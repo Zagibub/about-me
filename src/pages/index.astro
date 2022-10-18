@@ -1,9 +1,21 @@
 ---
 import MeComposition from "../components/MeComposition.vue";
 import AboutMeLayout from "../layouts/AboutMeLayout.vue";
-import HomeLayout from "../layouts/HomeLayout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<HomeLayout>
-    <AboutMeLayout client:load><MeComposition client:load /></AboutMeLayout>
-</HomeLayout>
+<Layout>
+  <div class="self-end m-2" slot="header">
+    <a
+      class="block hover:outline-offset-2 hover:border-b-2 hover:border-dashed hover:border-palette-200 focus:border-b-2 focus:border-dashed focus:border-palette-200"
+      href="/login">Login</a
+    >
+  </div>
+  <AboutMeLayout client:load><MeComposition client:load /></AboutMeLayout>
+
+  <div slot="footer" class="m-1 opacity-70 text-xs">
+    <span>Powered by:</span>
+    <a href="https://www.vecteezy.com/free-vector/left">Vecteezy</a>,
+    <a href="https://fontawesome.com/"> Font Awesome</a> | Handmade in Munich, Germany
+  </div>
+</Layout>
